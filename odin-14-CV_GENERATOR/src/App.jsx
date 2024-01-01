@@ -1,8 +1,8 @@
 
 import './styles/App.css'
-import Options from "./components/options.jsx"
-import Education from "./components/Education.jsx"
-import Experiance from "./components/Experiance.jsx"
+import {Options,Education,Experience,PersonalDetails} from "./components/sidebar.jsx"
+import { Resume } from './components/Resume.jsx'
+
 
 function App() {
 
@@ -10,12 +10,13 @@ function App() {
     <>
     <div id="Sidebar">
       <Options/>
-      <Education/>
-      <Experiance/>
-    </div>
-    <div id="Display">
+      <PersonalDetails />
+      <Education/>  
+      <Experience/>    
+
       
     </div>
+     <Resume/>
     </>
   )
 }
