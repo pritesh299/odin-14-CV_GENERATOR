@@ -1,6 +1,6 @@
 
 import './styles/App.css'
-import {Options,Education,Experience,PersonalDetails} from "./components/sidebar.jsx"
+import {Options,PersonalDetails, ProfessionalDetails} from "./components/sidebar.jsx"
 import { Resume } from './components/Resume.jsx'
 
 
@@ -10,9 +10,8 @@ function App() {
     <>
     <div id="Sidebar">
       <Options/>
-      <PersonalDetails />
-      <Education/>  
-      <Experience/>    
+      <PersonalDetails  />
+    <ProfessionalDetails/> 
 
       
     </div>
