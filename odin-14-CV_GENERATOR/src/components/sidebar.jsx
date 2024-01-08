@@ -1,5 +1,7 @@
 // components/Education.jsx
 import { Preform/* ,ExperienceForm,EducationForm */ } from "./Froms.jsx";
+import CIcon from '@coreui/icons-react';
+import {cilArrowBottom,cilArrowTop} from '@coreui/icons';
 import { useState } from 'react';
 
 function ProfessionalDetails() {
@@ -8,8 +10,10 @@ function ProfessionalDetails() {
   return (
     <>
       <div id="Education">
+        <div id="education_head">
         <h2>Education</h2>
         <button
+        className="head_button"
           style={{ backgroundColor: 'white' }}
           onClick={() => {
             if (activeIndex === 0 || activeIndex === 2) {
@@ -19,8 +23,9 @@ function ProfessionalDetails() {
             }
           }}
         >
-          {activeIndex === 1 ? 'Hide details' : 'Show details'}
+          {activeIndex === 1 ? <CIcon className="text-primary" icon={cilArrowTop} size="sm" /> :<CIcon className="text-primary" icon={cilArrowBottom} size="sm" /> }
         </button>
+        </div>
         {activeIndex === 1 && (
           <>
             <Preform title="first" />
@@ -29,8 +34,11 @@ function ProfessionalDetails() {
         )}
       </div>
       <div id="experience">
+        <div id="experiance_head">
+         
         <h2>Experiences</h2>
         <button
+        className="head_button"
           style={{ backgroundColor: 'white' }}
           onClick={() => {
             if (activeIndex === 0 || activeIndex === 1) {
@@ -40,10 +48,14 @@ function ProfessionalDetails() {
             }
           }}
         >
-          {activeIndex === 2 ? 'Hide details' : 'Show details'}
-        </button>
+                   {activeIndex === 2 ? <CIcon className="text-primary" icon={cilArrowTop} size="sm" /> :<CIcon className="text-primary" icon={cilArrowBottom} size="sm" /> }
+
+        </button></div>
+
         {activeIndex === 2 && (
           <>
+            <Preform title={'lol'} />
+            <Preform title={'lol'} />
             <Preform title={'lol'} />
             <button style={{ backgroundColor: 'white' }}>
               Add Experience
